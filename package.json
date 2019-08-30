@@ -1,0 +1,28 @@
+{
+  "name": "websocket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "eslintConfig": {
+    "extends": "marine/node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "eslint-config-marine": "^4.2.0",
+    "typescript": "^3.5.3",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v15.11.0",
+    "ws": "^7.1.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.12.0",
+    "@typescript-eslint/parser": "^1.8.0",
+    "eslint": "^5.16.0",
+    "ts-node-dev": "^1.0.0-pre.42"
+  }
+}
