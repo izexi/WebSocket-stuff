@@ -1,6 +1,5 @@
 import chalk from 'chalk';
 import * as uWS from 'uWebSockets.js';
-import { formatAddress } from './Clients';
 
 export default {
 	log(text: any, type = '') {
@@ -15,11 +14,11 @@ export default {
 	},
 
 	connected(ws: uWS.WebSocket) {
-		this.log(formatAddress(ws), `[${chalk.bgGreen('CONNECTED')}]`);
+		this.log(`${ws.id} (${ws.ip}) in room ${ws.room}`, `[${chalk.bgGreen('CONNECTED')}]`);
 	},
 
 	disconnected(ws: uWS.WebSocket) {
-		this.log(formatAddress(ws), `[${chalk.bgRed('DISCONNECTED')}]`);
+		this.log(`${ws.id} in room ${ws.room}`, `[${chalk.bgRed('DISCONNECTED')}]`);
 	},
 
 	error(text: string, err: any) {
